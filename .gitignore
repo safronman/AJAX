@@ -4,6 +4,7 @@
 *.log
 *.pdf
 *.psd
+.csscomb.json
 node_modules/
 Thumbs.db
 note.txt
