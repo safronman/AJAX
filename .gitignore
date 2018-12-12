@@ -4,6 +4,7 @@
 *.log
 *.pdf
 *.psd
+*.lnk
 .csscomb.json
 node_modules/
 Thumbs.db
