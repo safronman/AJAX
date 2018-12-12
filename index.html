@@ -4,11 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
   <title>AJAX</title>
 </head>
 <body>
 
-  <div class="content"></div>
+  <div class="ajax-wrapper">
+    <input class="ajax-input" type="number" placeholder="Введите номер страницы">
+    <button class="ajax-btn">Нажми на кнопку, чтобы получить ответ с сервера</button>
+  </div>
+
+  <div class="response"></div>
 
   <!-- Подключение jQuery -->
   <script
