@@ -1,17 +1,16 @@
-let inputEl = document.querySelector('.ajax-input');
+let pageNumberEl = document.querySelector('.ajax-input');
 let button = document.querySelector('.ajax-btn');
 
-button.addEventListener('click', makeRequest);
+button.addEventListener('click', () => {
+  getImages(pageNumberEl.value, onDataRecieved);
+});
 
-function makeRequest() {
-  $.ajax(`https://repetitora.net/api/JS/Images?page=${inputEl.value}&count=1`, {
-    success: function (data) {
-      data.forEach(el => {
-        let content = document.querySelector('.response');
-        let img = document.createElement('img');
-        img.src = el.thumbnail;
-        content.appendChild(img);
-      });
-    }
+
+function onDataRecieved(data) {
+  data.forEach(el => {
+    let response = document.querySelector('.resultBlock');
+    let img = document.createElement('img');
+    img.src = el.thumbnail;
+    response.appendChild(img);
   });
 }
