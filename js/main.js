@@ -2,15 +2,16 @@ let pageNumberEl = document.querySelector('.ajax-input');
 let button = document.querySelector('.ajax-btn');
 
 button.addEventListener('click', () => {
-  getImages(pageNumberEl.value, onDataRecieved);
+  let promise = getImages(pageNumberEl.value);
+  promise.then(onDataRecieved);
 });
 
 
-function onDataRecieved(data) {
-  data.forEach(el => {
-    let response = document.querySelector('.resultBlock');
+function onDataRecieved(array) {
+  array.forEach(el => {
+    let result = document.querySelector('.resultBlock');
     let img = document.createElement('img');
     img.src = el.thumbnail;
-    response.appendChild(img);
+    result.appendChild(img);
   });
 }
