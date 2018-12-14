@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Получение картинок с сервера</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <h2>Получение картинок с сервера</h2>
+    <input class="input  input--page-number" type="number" placeholder="Введите номер страницы (0-9)">
+    <button class="btn btn--images">Нажми на кнопку, чтобы получить ответ с сервера</button>
+    <div class="recievedImages"></div>
+  </div>
+
+  <!-- Подключение jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
+
+  <script src="js/imageUi.js"></script>
+  <script src="js/imageService.js"></script>
+
+</body>
+</html>
